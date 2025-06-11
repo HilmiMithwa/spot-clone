@@ -38,18 +38,22 @@ export default function Login() {
         </div>
       </div>
 
+      {/*Login form container */}
       <div id='login-form-container' className='w-1/2 min-h-screen flex items-center justify-center bg-danube-950 text-white font-roboto'>
-        <form onSubmit={handleLogin} className='bg-danube-900 rounded-xl mx-auto max-w-xl p-50'>
-          <h2 className='font-semibold'>Silahkan Login terlebih dahulu</h2><br/>
-          <label>NIM:<br/>
-            <input type='text'/>
-          </label> <br/>
-          <label>Password:<br/>
-            <input type='password'/><br/>
-          </label>
-          <div id='button-container'>
-            <button>Submit</button><br/>
-            <button>Clear</button>
+        <form onSubmit={handleLogin} className='bg-danube-900 rounded-xl mx-auto max-w-xl w-full px-9 pt-8 pb-8'>
+          <h1 className='font-semibold text-2xl mb-6 text-center'>Silahkan login terlebih dahulu</h1>
+          <div id='nim-container'>
+            <label>NIM:</label><br/>
+            <input className='bg-danube-800'></input>
+          </div>
+          <div id='password-container'>
+            <label>Password:</label><br/>
+            <input className='bg-danube-800 mb-10'></input>
+          </div>
+
+          <div id='button-container '>
+            <button className='bg-danube-950 mb-5 justify-center pt-3 pb-3 pl-50 pr-47'>Submit</button><br/>
+            <button className='bg-danube-950 justify-center pt-3 pb-3 pl-50 pr-50'>Clear</button>
           </div>
         </form>
       </div>
