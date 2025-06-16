@@ -11,9 +11,9 @@ export default function Login() {
   }
 
   const clearForm = () =>{
-    setNim(' ');
-    setPassword(' ');
-    
+    setNim('');
+    setPassword('');
+    alert('Form dibersihkan!')
   }
 
   return (
@@ -40,57 +40,34 @@ export default function Login() {
       </div>
 
       {/*Login form container */}
-      <div
-  id='login-form-container'
-  className='w-1/2 min-h-screen flex items-center justify-center bg-danube-950 text-white font-roboto'
->
-  <form
-    onSubmit={handleLogin}
-    className='bg-danube-900 rounded-xl mx-auto max-w-xl w-full px-9 pt-8 pb-8'
-  >
-    <h1 className='font-semibold text-2xl mb-6 text-center'>
-      Silahkan login terlebih dahulu
-    </h1>
+      <div id='login-form-container' className='w-1/2 min-h-screen flex items-center justify-center bg-danube-950 text-white font-roboto'>
+        <form onSubmit={handleLogin} className='bg-danube-900 rounded-xl mx-auto max-w-xl w-full px-9 pt-8 pb-8 '>
+          <h1 className='font-semibold text-2xl mb-6 text-center'>Silahkan login terlebih dahulu</h1>
 
-    {/* NIM Input */}
-    <div className='mb-4 flex justify-center'>
-      <div className='w-[397px]'>
-        <label className='font-light block mb-1'>NIM:</label>
-        <input
-          type='text'
-          className='bg-danube-800 rounded-[15px] h-[47px] w-full px-4'
-        />
+          {/*Nim input*/}
+          <div id='nim-container' className='mb-4 flex justify-center'>
+            <div className='w-[397px]'>
+              <label className='font-light block mb-1'>NIM:</label>
+              <input value={nim} type='text' className='bg-danube-800 rounded-[15px] h-[47px] w-full px-4' onChange={(e) => setNim(e.target.value)} />
+            </div>
+          </div>
+
+          {/*Password input */}
+          <div id='password-container' className='mb-4 flex justify-center'>
+            <div className='w-[397px]'>
+              <label className='font-light'>Password:</label><br/>
+            <input value={password} type='password' className='bg-danube-800 mb-10 rounded-[15px] h-[47px] w-full px-4' onChange={(e) => setPassword(e.target.value)}/>
+            </div>     
+          </div>
+
+          {/*Button container  */}
+          <div id='button-container' className="flex flex-col gap-4 mt-4 w-[397px] mx-auto">
+            <button type='submit' className='w-full bg-danube-950 text-white font-bold py-3 rounded-[15px]'>Masuk</button>
+            <button type='button' className='w-full bg-danube-950 text-white font-bold py-3 rounded-[15px]' onClick={clearForm}>Clear</button>
+          </div>
+
+        </form>
       </div>
-    </div>
-
-    {/* Password Input */}
-    <div className='mb-4 flex justify-center'>
-      <div className='w-[397px]'>
-        <label className='font-light block mb-1'>Password:</label>
-        <input
-          type='password'
-          className='bg-danube-800 mb-4 rounded-[15px] h-[47px] w-full px-4'
-        />
-      </div>
-    </div>
-
-    {/* Tombol */}
-    <div id='button-container' className='flex flex-col gap-4 mt-4 w-[397px] mx-auto'>
-      <button
-        type='submit'
-        className='w-full bg-danube-950 text-white font-bold py-3 rounded-lg'
-      >
-        Masuk
-      </button>
-      <button
-        type='button'
-        className='w-full bg-danube-950 text-white font-bold py-3 rounded-lg'
-      >
-        Clear
-      </button>
-    </div>
-  </form>
-</div>
     </div>
     </>
   )
