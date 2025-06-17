@@ -20,7 +20,7 @@ export default function Login() {
   return (
     <div className='min-h-screen flex flex-col md:flex-row'>
       
-      {/* KIRI: Gambar + Informasi */}
+      {/* Bagian kiri policy*/}
       <div
         id='login-container'
         className='w-full md:w-1/2 min-h-[50vh] md:min-h-screen flex items-center justify-center bg-cover bg-center text-white font-roboto relative'
@@ -49,7 +49,7 @@ export default function Login() {
         </div>
       </div>
 
-      {/* KANAN: Form Login */}
+      {/* Form Login */}
       <div
         id='login-form-container'
         className='w-full md:w-1/2 min-h-screen flex items-center justify-center bg-danube-950 text-white font-roboto px-4 py-8 md:px-0'
