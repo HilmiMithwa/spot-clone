@@ -1,16 +1,15 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Login from '../pages/login/Login.jsx';
-import MainDashboard from '../pages/main_dashboard/MainDashboard.jsx';
-import Footer from '../UI/footer.jsx';
-import Header from '../UI/Header.jsx';
-import BackButton from '../button/BackButton.jsx';
-
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Login from '../pages/login/Login'
+import MainDashboard from '../pages/main_dashboard/MainDashboard'
 
 export default function App() {
   return (
-    <>
-      <BackButton />
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/dashboard' element={<MainDashboard />} />
+      </Routes>
+    </Router>
   )
 }

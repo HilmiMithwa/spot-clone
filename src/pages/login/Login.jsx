@@ -4,10 +4,17 @@ import { useNavigate } from 'react-router-dom';
 export default function Login() {
   const [nim, setNim] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     console.log('Login clicked', nim, password);
+
+    if (nim && password) {
+      navigate('/dashboard');
+    } else {
+      alert('NIM dan Password harus diisi!')
+    }
   };
 
   const clearForm = () => {
