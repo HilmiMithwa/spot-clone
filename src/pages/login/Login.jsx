@@ -23,6 +23,10 @@ export default function Login() {
     alert('Form dibersihkan!');
   };
 
+  const HandleLocalStorage = () => {
+    
+  }
+
 
   return (
     <div className='min-h-screen flex flex-col md:flex-row'>
