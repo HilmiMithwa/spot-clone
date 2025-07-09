@@ -25,7 +25,26 @@ export default function MainDashboard() {
         </button>
         <h2 className='text-2xl font-bold'>Dashboard Utama </h2>
       </header>
+
+      <main id='class-container'>
+        <div id='student-name-container' className='bg-danube-900 mt-30 p-10 rounded-lg  w-fit text-white pb-90'>
+          <h1>Hilmi Mithwa Ramadhan</h1>
+          <h2 className='text-center'>2404042</h2>
+          <button className='flex items-center gap-2 mt-4'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h10M4 18h14"/>       
+            </svg>
+            Daftar Mata Kuliah
+          </button>
+          <div id='assignment-container'>
+            <div className='bg-danube-950 p-4 rounded-lg mt-4'>
+              
+
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
+
 
     <LogoutAlert show={showLogoutAlert} onClose={() => setShowLogoutAlert(false)} onConfirm={handleback} />
 
